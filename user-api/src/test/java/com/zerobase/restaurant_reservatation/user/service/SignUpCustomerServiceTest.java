@@ -27,5 +27,6 @@ class SignUpCustomerServiceTest {
         Customer c = service.signUp(form);
         assertNotNull(c.getId());
         assertNotNull(c.getCreatedAt());
+        assertEquals(c.getEmail(), "test@gmail.com");
     }
 }
