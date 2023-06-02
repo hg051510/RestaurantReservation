@@ -36,6 +36,7 @@ public class JwtAuthenticationProvider {
         }
     }
 
+    // 토큰으로 회원 정보 추출
     public UserVo getUserVo(String token){
         Claims c = Jwts.parser().setSigningKey(secretKey).parseClaimsJws(token).getBody();
         return new UserVo(Long.valueOf(Aes256Util.decrypt(c.getId())), Aes256Util.decrypt(c.getSubject()));
