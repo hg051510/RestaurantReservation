@@ -2,6 +2,7 @@ package com.zerobase.restaurant_reservatation.user.service;
 
 import com.zerobase.restaurant_reservatation.user.domain.SignUpForm;
 import com.zerobase.restaurant_reservatation.user.domain.model.Customer;
+import com.zerobase.restaurant_reservatation.user.service.customer.SignUpCustomerService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

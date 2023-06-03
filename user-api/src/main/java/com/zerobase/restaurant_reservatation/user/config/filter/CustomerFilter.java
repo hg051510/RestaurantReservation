@@ -2,7 +2,7 @@ package com.zerobase.restaurant_reservatation.user.config.filter;
 
 import com.zerobase.domain.config.JwtAuthenticationProvider;
 import com.zerobase.domain.domain.common.UserVo;
-import com.zerobase.restaurant_reservatation.user.service.CustomerService;
+import com.zerobase.restaurant_reservatation.user.service.customer.CustomerService;
 import lombok.RequiredArgsConstructor;
 
 import javax.servlet.*;
@@ -12,7 +12,7 @@ import java.io.IOException;
 
 @WebFilter(urlPatterns = "/customer/*")
 @RequiredArgsConstructor
-public class CustomFilter implements Filter {
+public class CustomerFilter implements Filter {
     private final JwtAuthenticationProvider jwtAuthenticationProvider;
     private final CustomerService customerService;
 
