@@ -1,0 +1,56 @@
+###############
+
+### 회원가입 (손님)
+POST http://localhost:8081/signup/customer
+Content-Type: application/json
+
+{
+  "birth": "2000-01-01",
+  "email": "hg051510@naver.com",
+  "name": "손님1",
+  "password": "1234",
+  "phone": "01064008169"
+}
+
+### 이메일 인증 (고객)
+GET http://localhost:8081/signup/customer/verify/?email=hg051510@naver.com&code=SBN3BjVI1i
+
+### 로그인 (고객)
+POST http://localhost:8081/signin/customer
+Content-Type: application/json
+
+{
+  "email": "hg051510@naver.com",
+  "password": "1234"
+}
+
+### 회원 정보 조회 (고객)
+GET http://localhost:8081/customer/getInfo
+Content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtQ21WcnVKM0VUYzhWTE1iVFNVMm4zSy9tdHVJeGxPb2Vzcm5nY2J0MlhNPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE2ODU3OTgyNTEsImV4cCI6MTY4NjQwMzA1MX0.LWNgPtU3eZPAPHef0pnBAaX6sGuVENqm1CmORKXm0uA
+
+#########################
+
+### 회원가입 (점장)
+POST http://localhost:8081/signup/manager
+Content-Type: application/json
+
+{
+  "birth": "1998-09-29",
+  "email": "hg051510@naver.com",
+  "name": "김두현",
+  "password": "1234",
+  "phone": "01064008169"
+}
+
+### 이메일 인증 (셀러)
+GET http://localhost:8081/signup/manager/verify/?email=hg051510@naver.com&code=Vpu8l3kdqJ
+
+### 로그인 (셀러)
+POST http://localhost:8081/signin/manager
+Content-Type: application/json
+
+{
+  "email": "hg051510@naver.com",
+  "password": "1234"
+}
