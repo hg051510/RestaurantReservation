@@ -70,7 +70,7 @@ public class SignUpApplication {
 
             log.info("Send email result : " +
                     mailgunClient.sendEmail(sendMailForm).getBody());
-            signUpCustomerService.changeCustomerValidateEmail(m.getId(), code);
+            signUpManagerService.changeManagerValidateEmail(m.getId(), code);
             return "회원 가입에 성공하셨습니다.";
         }
     }
