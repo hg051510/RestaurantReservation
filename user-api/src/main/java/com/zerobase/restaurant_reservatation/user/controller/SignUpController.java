@@ -12,14 +12,26 @@ import org.springframework.web.bind.annotation.*;
 public class SignUpController {
     private final SignUpApplication signUpApplication;
 
-    @PostMapping
+    @PostMapping("/customer")
     public ResponseEntity<String> customerSignup(@RequestBody SignUpForm form){
         return ResponseEntity.ok(signUpApplication.customerSignUp(form));
     }
 
-    @PutMapping("/verify/customer")
+    @GetMapping("/customer/verify")
     public ResponseEntity<String> verifyCustomer(String email, String code){
         signUpApplication.customerVerify(email, code);
+
+        return ResponseEntity.ok("인증이 완료되었습니다.");
+    }
+
+    @PostMapping("/manager")
+    public ResponseEntity<String> managerSignUp(@RequestBody SignUpForm form){
+        return ResponseEntity.ok(signUpApplication.managerSignUp(form));
+    }
+
+    @GetMapping("/manager/verify")
+    public ResponseEntity<String> verifyManager(String email, String code){
+        signUpApplication.managerVerify(email, code);
 
         return ResponseEntity.ok("인증이 완료되었습니다.");
     }

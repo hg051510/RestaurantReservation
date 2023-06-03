@@ -15,7 +15,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @AuditOverride(forClass = BaseEntity.class)
-public class Customer extends BaseEntity{
+public class Manager extends BaseEntity{
     @Id
     @Column(name = "id", nullable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -27,19 +27,20 @@ public class Customer extends BaseEntity{
     private String password;
     private String phone;
     private LocalDate birth;
-
     private LocalDateTime verifyExpiredAt;
     private String verificationCode;
     private boolean verify;
+    private boolean partnerVerify;
 
-    public static Customer from(SignUpForm form){
-        return Customer.builder()
+    public static Manager from(SignUpForm form){
+        return Manager.builder()
                 .email(form.getEmail())
                 .name(form.getName())
                 .password(form.getPassword())
                 .phone(form.getPhone())
                 .birth(form.getBirth())
                 .verify(false)
+                .partnerVerify(false)
                 .build();
     }
 }

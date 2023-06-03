@@ -6,7 +6,7 @@ import com.zerobase.restaurant_reservatation.user.domain.customer.CustomerDto;
 import com.zerobase.restaurant_reservatation.user.domain.model.Customer;
 import com.zerobase.restaurant_reservatation.user.exception.CustomerException;
 import com.zerobase.restaurant_reservatation.user.exception.ErrorCode;
-import com.zerobase.restaurant_reservatation.user.service.CustomerService;
+import com.zerobase.restaurant_reservatation.user.service.customer.CustomerService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

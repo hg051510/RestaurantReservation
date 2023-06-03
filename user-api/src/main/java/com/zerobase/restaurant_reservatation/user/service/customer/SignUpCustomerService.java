@@ -1,4 +1,4 @@
-package com.zerobase.restaurant_reservatation.user.service;
+package com.zerobase.restaurant_reservatation.user.service.customer;
 
 import com.zerobase.restaurant_reservatation.user.domain.SignUpForm;
 import com.zerobase.restaurant_reservatation.user.domain.model.Customer;
@@ -9,7 +9,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Locale;
 import java.util.Optional;
