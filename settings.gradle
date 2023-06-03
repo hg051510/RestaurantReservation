@@ -1,0 +1,4 @@
+rootProject.name = 'RestaurantReservation'
+include 'user-api'
+include 'domain'
+include 'order-api'
